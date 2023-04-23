@@ -65,12 +65,13 @@ class RoleController extends Controller {
   // 登录
   async login() {
     const { ctx } = this
-    const { no, password, email } = ctx.query
+    const { no, email, password } = ctx.request.body
     // 类型检查
     const regEmail = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 
     const number = parseInt(no),
       e_email = email
+
 
     // 密码
     if (!password || password.length === 0) {
@@ -103,14 +104,14 @@ class RoleController extends Controller {
 
   }
 
-// 注册用户
+  // 注册用户
   async register() {
     const { ctx } = this
-    const { no, password, email, name, age } = ctx.query
+    const { no, password, email, name, age } = ctx.request.body
     const regEmail = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 
     // 检查编号
-    if (!no || isNaN(no)) {
+    if (!no || isNaN(parseInt(no))) {
       ctx.body = { code: 400, message: '编号必须为数字' }
     }
 

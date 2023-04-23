@@ -1,316 +1,321 @@
 {
   "sequelize": {
-    "dialect": "D:\\code\\web\\backend\\config\\config.default.js",
-    "host": "D:\\code\\web\\backend\\config\\config.default.js",
-    "port": "D:\\code\\web\\backend\\config\\config.default.js",
-    "database": "D:\\code\\web\\backend\\config\\config.default.js",
-    "username": "D:\\code\\web\\backend\\config\\config.default.js",
-    "password": "D:\\code\\web\\backend\\config\\config.default.js"
+    "dialect": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+    "host": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+    "port": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+    "database": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+    "username": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+    "password": "D:\\code\\web\\exam-system-backend\\config\\config.default.js"
   },
   "security": {
     "csrf": {
-      "enable": "D:\\code\\web\\backend\\config\\config.default.js",
-      "type": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "ignoreJSON": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "useSession": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "cookieName": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "sessionName": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "headerName": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "bodyName": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "queryName": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "supportedRequests": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "refererWhiteList": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+      "type": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "supportedRequests": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
-    "domainWhiteList": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
+    "domainWhiteList": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.local.js",
-      "maxAge": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "includeSubdomains": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "dta": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "methodnoallow": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "noopen": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "nosniff": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "referrerPolicy": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "xssProtection": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "csp": {
-      "enable": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "policy": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     },
     "ssrf": {
-      "ipBlackList": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "ipExceptionList": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js",
-      "checkAddress": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+      "ipBlackList": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
     }
   },
-  "keys": "D:\\code\\web\\backend\\config\\config.default.js",
-  "middleware": "D:\\code\\web\\backend\\config\\config.default.js",
+  "cors": {
+    "origin": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+    "allowMethods": "D:\\code\\web\\exam-system-backend\\config\\config.default.js"
+  },
+  "keys": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
+  "middleware": "D:\\code\\web\\exam-system-backend\\config\\config.default.js",
   "session": {
-    "maxAge": "D:\\code\\web\\backend\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "D:\\code\\web\\backend\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "D:\\code\\web\\backend\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "D:\\code\\web\\backend\\node_modules\\egg-session\\config\\config.default.js",
-    "logValue": "D:\\code\\web\\backend\\node_modules\\egg-session\\config\\config.default.js"
+    "maxAge": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
-    "shtml": "D:\\code\\web\\backend\\node_modules\\egg-security\\config\\config.default.js"
+    "shtml": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-security\\config\\config.default.js"
   },
   "jsonp": {
-    "limit": "D:\\code\\web\\backend\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "callback": "D:\\code\\web\\backend\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "csrf": "D:\\code\\web\\backend\\node_modules\\egg-jsonp\\config\\config.default.js"
+    "limit": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-jsonp\\config\\config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "D:\\code\\web\\backend\\node_modules\\egg-onerror\\config\\config.default.js",
-    "appErrorFilter": "D:\\code\\web\\backend\\node_modules\\egg-onerror\\config\\config.default.js",
-    "templatePath": "D:\\code\\web\\backend\\node_modules\\egg-onerror\\config\\config.default.js"
+    "errorPageUrl": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-onerror\\config\\config.default.js"
   },
   "i18n": {
-    "defaultLocale": "D:\\code\\web\\backend\\node_modules\\egg-i18n\\config\\config.default.js",
-    "dirs": "D:\\code\\web\\backend\\node_modules\\egg-i18n\\config\\config.default.js",
-    "queryField": "D:\\code\\web\\backend\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieField": "D:\\code\\web\\backend\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieDomain": "D:\\code\\web\\backend\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieMaxAge": "D:\\code\\web\\backend\\node_modules\\egg-i18n\\config\\config.default.js"
+    "defaultLocale": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "D:\\code\\web\\backend\\node_modules\\egg-watcher\\config\\config.local.js",
+    "type": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-watcher\\config\\config.local.js",
     "eventSources": {
-      "default": "D:\\code\\web\\backend\\node_modules\\egg-watcher\\config\\config.default.js",
-      "development": "D:\\code\\web\\backend\\node_modules\\egg-watcher\\config\\config.default.js"
+      "default": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-watcher\\config\\config.default.js"
     }
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "D:\\code\\web\\backend\\node_modules\\egg-schedule\\config\\config.default.js",
-      "file": "D:\\code\\web\\backend\\node_modules\\egg-schedule\\config\\config.default.js"
+      "consoleLevel": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-schedule\\config\\config.default.js"
     }
   },
   "schedule": {
-    "directory": "D:\\code\\web\\backend\\node_modules\\egg-schedule\\config\\config.default.js"
+    "directory": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-schedule\\config\\config.default.js"
   },
   "multipart": {
-    "mode": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "autoFields": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "defaultCharset": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "defaultParamCharset": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldNameSize": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldSize": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fields": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileSize": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "files": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileExtensions": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "whitelist": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "allowArrayField": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-    "tmpdir": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "mode": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultParamCharset": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
     "cleanSchedule": {
-      "cron": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js",
-      "disable": "D:\\code\\web\\backend\\node_modules\\egg-multipart\\config\\config.default.js"
+      "cron": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
   "development": {
-    "watchDirs": "D:\\code\\web\\backend\\node_modules\\egg-development\\config\\config.default.js",
-    "ignoreDirs": "D:\\code\\web\\backend\\node_modules\\egg-development\\config\\config.default.js",
-    "fastReady": "D:\\code\\web\\backend\\node_modules\\egg-development\\config\\config.default.js",
-    "reloadOnDebug": "D:\\code\\web\\backend\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideDefault": "D:\\code\\web\\backend\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideIgnore": "D:\\code\\web\\backend\\node_modules\\egg-development\\config\\config.default.js"
+    "watchDirs": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideIgnore": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-development\\config\\config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "hourDelimiter": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "filesRotateBySize": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFileSize": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFiles": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "rotateDuration": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxDays": "D:\\code\\web\\backend\\node_modules\\egg-logrotator\\config\\config.default.js"
+    "filesRotateByHour": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-logrotator\\config\\config.default.js"
   },
   "static": {
-    "prefix": "D:\\code\\web\\backend\\node_modules\\egg-static\\config\\config.default.js",
-    "dir": "D:\\code\\web\\backend\\node_modules\\egg-static\\config\\config.default.js",
-    "dynamic": "D:\\code\\web\\backend\\node_modules\\egg-static\\config\\config.default.js",
-    "preload": "D:\\code\\web\\backend\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "D:\\code\\web\\backend\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "D:\\code\\web\\backend\\node_modules\\egg-static\\config\\config.default.js"
+    "prefix": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-static\\config\\config.default.js"
   },
   "view": {
-    "root": "D:\\code\\web\\backend\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "D:\\code\\web\\backend\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "D:\\code\\web\\backend\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "D:\\code\\web\\backend\\node_modules\\egg-view\\config\\config.default.js",
-    "mapping": "D:\\code\\web\\backend\\node_modules\\egg-view\\config\\config.default.js"
+    "root": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "D:\\code\\web\\exam-system-backend\\node_modules\\egg-view\\config\\config.default.js"
   },
-  "env": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "name": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "cookies": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "proxy": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "maxIpsCount": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "maxProxyCount": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "protocolHeaders": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "ipHeaders": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "hostHeaders": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+  "env": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "name": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
   "pkg": {
-    "name": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "version": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "description": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "private": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+    "name": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "version": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "description": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "private": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
     "egg": {
-      "declarations": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "declarations": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "dependencies": {
-      "egg": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "egg-scripts": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "egg-sequelize": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "mysql2": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "prettier": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "egg": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "egg-cors": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "egg-sequelize": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "mysql2": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "prettier": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "egg-bin": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "egg-ci": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "egg-mock": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "eslint": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "eslint-config-egg": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "egg-bin": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "eslint": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "eslint-config-egg": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "engines": {
-      "node": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "node": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "scripts": {
-      "start": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "stop": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "dev": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "debug": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "test": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "test-local": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "cov": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "lint": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "ci": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "start": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "stop": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "dev": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "debug": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "test": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "test-local": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "cov": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "lint": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "ci": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "ci": {
-      "version": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "type": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "version": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "type": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "repository": {
-      "type": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "url": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "type": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "url": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
-    "author": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "license": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "author": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "license": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
-  "baseDir": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "HOME": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "rundir": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+  "baseDir": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
   "dump": {
-    "ignore": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+    "ignore": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
     "timing": {
-      "slowBootActionMinDuration": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "slowBootActionMinDuration": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "confusedConfigurations": {
-    "bodyparser": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "notFound": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "sitefile": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "middlewares": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "httpClient": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "bodyparser": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
   "notfound": {
-    "pageUrl": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "pageUrl": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "cacheControl": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "/favicon.ico": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "cacheControl": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
   "bodyParser": {
-    "enable": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "formLimit": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "jsonLimit": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "textLimit": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "strict": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+    "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "strict": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
     "queryString": {
-      "arrayLimit": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "depth": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "parameterLimit": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "arrayLimit": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "depth": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
-    "onerror": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "onerror": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
   "logger": {
-    "dir": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "env": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "level": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "disableConsoleAfterReady": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "outputJSON": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "appLogName": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "coreLogName": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "agentLogName": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "errorLogName": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+    "dir": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "env": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "level": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
     "coreLogger": {
-      "consoleLevel": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.local.js"
+      "consoleLevel": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.local.js"
     },
-    "allowDebugAtProd": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "enablePerformanceTimer": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "enableFastContextLogger": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "allowDebugAtProd": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "enablePerformanceTimer": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "enableFastContextLogger": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheLookupInterval": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheMaxLength": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+    "enableDNSCache": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
     "request": {
-      "timeout": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "timeout": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     },
-    "useHttpClientNext": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "useHttpClientNext": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
   "meta": {
-    "enable": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "logging": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "enable": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "logging": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
-  "coreMiddleware": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "workerStartTimeout": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-  "serverTimeout": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
+  "coreMiddleware": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
   "cluster": {
     "listen": {
-      "path": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "port": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-      "hostname": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+      "path": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "port": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "clusterClient": {
-    "maxWaitTime": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js",
-    "responseTimeout": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+    "maxWaitTime": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
   },
-  "onClientError": "D:\\code\\web\\backend\\node_modules\\egg\\config\\config.default.js"
+  "onClientError": "D:\\code\\web\\exam-system-backend\\node_modules\\egg\\config\\config.default.js"
 }
