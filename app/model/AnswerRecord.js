@@ -11,7 +11,6 @@ module.exports = (app) => {
       references: {
         model: app.model.Role,
         key: 'id'
-
       }
     },
     paperId: {
@@ -49,6 +48,8 @@ module.exports = (app) => {
       field: 'updated_at',
       type: DATE
     }
+  }, {
+    collate: 'utf8mb4_general_ci'
   })
 
   return AnswerRecord

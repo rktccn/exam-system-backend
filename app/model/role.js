@@ -48,6 +48,8 @@ module.exports = (app) => {
     }
   }, {
     comment: '角色表'
+  },{
+    collate: 'utf8mb4_general_ci'
   })
 
   return Role

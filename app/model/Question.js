@@ -42,6 +42,8 @@ module.exports = (app) => {
     }
   }, {
     comment: '试题表'
+  },{
+    collate: 'utf8mb4_general_ci'
   })
 
   return Question

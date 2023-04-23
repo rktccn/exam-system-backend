@@ -33,6 +33,8 @@ module.exports = (app) => {
     }
   }, {
     comment: '教师学生关系表'
+  },{
+    collate: 'utf8mb4_general_ci'
   })
 
   return TeacherStudent

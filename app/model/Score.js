@@ -63,6 +63,8 @@ module.exports = (app) => {
       field: 'updated_at',
       type: DATE
     }
+  },{
+    collate: 'utf8mb4_general_ci'
   })
 
   return Score
