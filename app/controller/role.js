@@ -55,11 +55,19 @@ class RoleController extends Controller {
   // 获取所有用户
   async getAllUser() {
     const { ctx } = this
-    const limit = parseInt(ctx.query.limit)
-    const offset = parseInt(ctx.query.offset)
+    const limit = parseInt(ctx.query.limit) | 10
+    const offset = parseInt(ctx.query.offset) | 0
     const permission = parseInt(ctx.query.permission)
 
     ctx.body = await ctx.service.role.getAllUser(limit, offset, permission)
+  }
+
+  // 获取用户数量
+  async getUserCount() {
+    const { ctx } = this
+    const permission = parseInt(ctx.query.permission)
+
+    ctx.body = await ctx.service.role.getUserCount(permission)
   }
 
   // 登录
@@ -134,6 +142,13 @@ class RoleController extends Controller {
     ctx.body = await ctx.service.role.register(no, password, email, name, age)
   }
 
+  // 更新用户信息
+  async updateUserInfo() {
+    const { ctx } = this
+    const { id, no, email, name, age, password, permission } = ctx.request.body
+    // 更新
+    ctx.body = await ctx.service.role.updateUser(id, no, email, name, age, password, permission)
+  }
 }
 
 module.exports = RoleController

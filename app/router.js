@@ -17,5 +17,8 @@ module.exports = app => {
   router.post('/login', controller.role.login)
   // 注册
   router.post('/register', controller.role.register)
-
+  // 获取用户数量
+  router.get('/user/count', controller.role.getUserCount)
+  // 更新用户信息
+  router.post('/user/update', controller.role.updateUserInfo)
 }

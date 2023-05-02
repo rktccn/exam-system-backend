@@ -47,7 +47,7 @@ class Role extends service {
       email,
       name,
       age,
-      permission: 0
+      permission: 2
     })
 
     if (!user) {
@@ -97,22 +97,56 @@ class Role extends service {
   }
 
 // 获取所有用户
-  async getAllUser(limit = 10, offset = 0, permission = 2) {
+  async getAllUser(limit, offset, permission) {
     const { ctx } = this
     const Op = this.app.Sequelize.Op
 
-    return await ctx.model.Role.findAndCountAll({
-      limit,
-      offset,
-      where: {
-        permission: {
-          [Op.gte]: permission
+    if (permission === 0 || permission === 1 || permission === 2) {
+      return await ctx.model.Role.findAndCountAll({
+        limit,
+        offset,
+        where: {
+          permission: permission
         }
-      }
-    })
+      })
+    } else {
+      return await ctx.model.Role.findAndCountAll({
+        limit,
+        offset
+      })
+    }
   }
 
+// 获取用户数量
+  async getUserCount(permission) {
+    const { ctx } = this
 
+    if (permission === 0 || permission === 1 || permission === 2) {
+      return await ctx.model.Role.count({
+        where: {
+          permission: permission
+        }
+      })
+    } else {
+      return await ctx.model.Role.count()
+    }
+  }
+
+  // 更新用户信息
+  async updateUser(id, no, email, name, age, password, permission) {
+    const { ctx } = this
+    await ctx.model.Role.update({
+      no,
+      email,
+      name,
+      age,
+      password,
+      permission
+    }, {
+      where: { id }
+    })
+  }
 }
+
 
 module.exports = Role
