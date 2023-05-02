@@ -3,24 +3,24 @@
 /* eslint-disable */
 
 import 'egg';
-import ExportAnswerRecord = require('../../../app/model/AnswerRecord');
 import ExportPaper = require('../../../app/model/Paper');
+import ExportPaperAnswer = require('../../../app/model/PaperAnswer');
 import ExportPaperQuestion = require('../../../app/model/PaperQuestion');
 import ExportQuestion = require('../../../app/model/Question');
 import ExportQuestionOption = require('../../../app/model/QuestionOption');
 import ExportRole = require('../../../app/model/role');
-import ExportScore = require('../../../app/model/Score');
+import ExportStudentPaper = require('../../../app/model/StudentPaper');
 import ExportTeacherStudent = require('../../../app/model/TeacherStudent');
 
 declare module 'egg' {
   interface IModel {
-    AnswerRecord: ReturnType<typeof ExportAnswerRecord>;
     Paper: ReturnType<typeof ExportPaper>;
+    PaperAnswer: ReturnType<typeof ExportPaperAnswer>;
     PaperQuestion: ReturnType<typeof ExportPaperQuestion>;
     Question: ReturnType<typeof ExportQuestion>;
     QuestionOption: ReturnType<typeof ExportQuestionOption>;
     Role: ReturnType<typeof ExportRole>;
-    Score: ReturnType<typeof ExportScore>;
+    StudentPaper: ReturnType<typeof ExportStudentPaper>;
     TeacherStudent: ReturnType<typeof ExportTeacherStudent>;
   }
 }

@@ -3,7 +3,7 @@
 module.exports = (app) => {
   const { INTEGER, DATE } = app.Sequelize
 
-  const Score = app.model.define('score', {
+  const StudentPaper = app.model.define('student_paper', {
     studentId: {
       type: INTEGER,
       allowNull: false,
@@ -67,5 +67,5 @@ module.exports = (app) => {
     collate: 'utf8mb4_general_ci'
   })
 
-  return Score
+  return StudentPaper
 }

@@ -12,7 +12,8 @@
     "egg-scripts": "^2",
     "egg-sequelize": "^6.0.0",
     "mysql2": "^3.2.3",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "egg-bin": "^5",

@@ -3,22 +3,13 @@
 module.exports = (app) => {
   const { INTEGER, DATE } = app.Sequelize
 
-  const AnswerRecord = app.model.define('answer_record', {
-    studentId: {
+  const PaperAnswer = app.model.define('paper_answer', {
+    studentPaperId: {
       type: INTEGER,
       allowNull: false,
-      comment: '学生编号',
+      comment: '学生考试记录编号',
       references: {
-        model: app.model.Role,
-        key: 'id'
-      }
-    },
-    paperId: {
-      type: INTEGER,
-      allowNull: false,
-      comment: '试卷编号',
-      references: {
-        model: app.model.Paper,
+        model: app.model.StudentPaper,
         key: 'id'
       }
     },
@@ -31,7 +22,7 @@ module.exports = (app) => {
         key: 'id'
       }
     },
-    questionOptionId: {
+    answerId: {
       type: INTEGER,
       allowNull: false,
       comment: '试题选项编号',
@@ -52,5 +43,5 @@ module.exports = (app) => {
     collate: 'utf8mb4_general_ci'
   })
 
-  return AnswerRecord
+  return PaperAnswer
 }
