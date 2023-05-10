@@ -21,4 +21,12 @@ module.exports = app => {
   router.get('/user/count', controller.role.getUserCount)
   // 更新用户信息
   router.post('/user/update', controller.role.updateUserInfo)
+
+
+  // 添加题目
+  router.post('/question/add', controller.question.addQuestion)
+  // 获取题目列表
+  router.get('/question/list', controller.question.getQuestionList)
+  // 修改题目
+  router.post('/question/update', controller.question.updateQuestion)
 }

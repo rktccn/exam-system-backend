@@ -33,12 +33,12 @@ module.exports = (app) => {
       allowNull: false,
       comment: '是否正确'
     },
-    // 分值
-    score: {
-      type: INTEGER,
-      allowNull: false,
-      comment: '分值'
-    },
+    // // 分值
+    // score: {
+    //   type: INTEGER,
+    //   allowNull: false,
+    //   comment: '分值'
+    // },
     createdAt: {
       field: 'created_at',
       type: DATE

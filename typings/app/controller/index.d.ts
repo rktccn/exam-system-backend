@@ -4,11 +4,13 @@
 
 import 'egg';
 import ExportHome = require('../../../app/controller/home');
+import ExportQuestion = require('../../../app/controller/question');
 import ExportRole = require('../../../app/controller/role');
 
 declare module 'egg' {
   interface IController {
     home: ExportHome;
+    question: ExportQuestion;
     role: ExportRole;
   }
 }
