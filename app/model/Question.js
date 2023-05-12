@@ -5,15 +5,15 @@ module.exports = (app) => {
   const { INTEGER, DATE, STRING } = app.Sequelize
 
   const Question = app.model.define('question', {
-    teacherId: {
-      type: INTEGER,
-      allowNull: false,
-      comment: '教师编号',
-      references: {
-        model: app.model.Role,
-        key: 'id'
-      }
-    },
+    // teacherId: {
+    //   type: INTEGER,
+    //   allowNull: false,
+    //   comment: '教师编号',
+    //   references: {
+    //     model: app.model.Role,
+    //     key: 'id'
+    //   }
+    // },
     // 试题类型
     type: {
       type: INTEGER,

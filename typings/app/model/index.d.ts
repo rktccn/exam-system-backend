@@ -10,7 +10,6 @@ import ExportQuestion = require('../../../app/model/Question');
 import ExportQuestionOption = require('../../../app/model/QuestionOption');
 import ExportRole = require('../../../app/model/role');
 import ExportStudentPaper = require('../../../app/model/StudentPaper');
-import ExportTeacherStudent = require('../../../app/model/TeacherStudent');
 
 declare module 'egg' {
   interface IModel {
@@ -21,6 +20,5 @@ declare module 'egg' {
     QuestionOption: ReturnType<typeof ExportQuestionOption>;
     Role: ReturnType<typeof ExportRole>;
     StudentPaper: ReturnType<typeof ExportStudentPaper>;
-    TeacherStudent: ReturnType<typeof ExportTeacherStudent>;
   }
 }

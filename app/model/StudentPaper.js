@@ -25,34 +25,34 @@ module.exports = (app) => {
     // 得分
     score: {
       type: INTEGER,
-      allowNull: false,
+      allowNull: true,
       comment: '得分'
     },
     // 总分
     totalScore: {
       field: 'total_score',
       type: INTEGER,
-      allowNull: false,
+      allowNull: true,
       comment: '总分'
     },
     // 答题时间
     answerTime: {
       field: 'answer_time',
       type: INTEGER,
-      allowNull: false,
+      allowNull: true,
       comment: '答题时间'
     },
     // 交卷时间
     submitTime: {
       field: 'submit_time',
       type: DATE,
-      allowNull: false,
+      allowNull: true,
       comment: '交卷时间'
     },
     // 状态
     status: {
       type: INTEGER,
-      allowNull: false,
+      allowNull: true,
       comment: '状态, 0: 未开始, 1: 进行中, 2: 已结束'
     },
     createdAt: {
@@ -63,7 +63,7 @@ module.exports = (app) => {
       field: 'updated_at',
       type: DATE
     }
-  },{
+  }, {
     collate: 'utf8mb4_general_ci'
   })
 

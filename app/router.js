@@ -29,4 +29,10 @@ module.exports = app => {
   router.get('/question/list', controller.question.getQuestionList)
   // 修改题目
   router.post('/question/update', controller.question.updateQuestion)
+
+
+  // 添加试卷
+  router.post('/paper/add', controller.paper.createPaper)
+  // 获取试卷列表
+  router.get('/paper/list', controller.paper.getPaperList)
 }

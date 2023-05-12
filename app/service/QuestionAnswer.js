@@ -35,7 +35,7 @@ class QuestionAnswer extends Service {
   // 获取题目正确答案
   async getQuestionCorrectAnswer(questionId) {
     const { ctx } = this
-    const result = await ctx.model.QuestionAnswer.findAll({
+    const result = await ctx.model.QuestionOption.findAll({
       where: {
         questionId,
         isCorrect: 1
@@ -47,7 +47,7 @@ class QuestionAnswer extends Service {
   // 修改题目答案
   async updateQuestionAnswer(questionId, answer) {
     const { ctx } = this
-    const result = await ctx.model.QuestionAnswer.update({
+    const result = await ctx.model.QuestionOption.update({
       answer
     }, {
       where: {
@@ -60,7 +60,7 @@ class QuestionAnswer extends Service {
   // 删除题目答案
   async deleteQuestionAnswer(questionId) {
     const { ctx } = this
-    const result = await ctx.model.QuestionAnswer.destroy({
+    const result = await ctx.model.QuestionOption.destroy({
       where: {
         questionId
       }

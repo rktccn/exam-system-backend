@@ -29,27 +29,22 @@ class Question extends service {
   }
 
   // 获取题目列表
-  async getQuestionList(teacherId) {
+  async getQuestionList() {
     const { ctx } = this
-    const res = await ctx.model.Question.findAll({
-      where: {
-        teacherId
-      }
-    })
-
+    const res = await ctx.model.Question.findAll()
     return res.map((item) => {
       return item.toJSON()
     })
   }
 
   // 修改题目
-  async updateQuestion(questionId, content, score) {
+  async updateQuestion(questionId, content, score, type) {
     const { ctx } = this
     const result = await ctx.model.Question.update({
-      content, score
+      content, score, type
     }, {
       where: {
-        questionId
+        id: questionId
       }
     })
     return result

@@ -25,11 +25,11 @@ module.exports = (app) => {
       comment: '试卷总分'
     },
     // 试卷时长
-    duration: {
-      type: INTEGER,
-      allowNull: false,
-      comment: '试卷时长'
-    },
+    // duration: {
+    //   type: INTEGER,
+    //   allowNull: false,
+    //   comment: '试卷时长'
+    // },
     // 试卷开始时间
     startTime: {
       field: 'start_time',
@@ -45,11 +45,11 @@ module.exports = (app) => {
       comment: '试卷结束时间'
     },
     // 试卷状态
-    status: {
-      type: INTEGER,
-      allowNull: false,
-      comment: '试卷状态, 0: 未开始, 1: 进行中, 2: 已结束'
-    },
+    // status: {
+    //   type: INTEGER,
+    //   allowNull: false,
+    //   comment: '试卷状态, 0: 未开始, 1: 进行中, 2: 已结束'
+    // },
     createdAt: {
       field: 'created_at',
       type: DATE

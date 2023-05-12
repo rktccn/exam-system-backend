@@ -3,15 +3,15 @@
 module.exports = (app) => {
   const { STRING, BOOLEAN, INTEGER, DATE } = app.Sequelize
   const QuestionOption = app.model.define('question_option', {
-    teacherId: {
-      type: INTEGER,
-      allowNull: false,
-      comment: '教师编号',
-      references: {
-        model: app.model.Role,
-        key: 'id'
-      }
-    },
+    // teacherId: {
+    //   type: INTEGER,
+    //   allowNull: false,
+    //   comment: '教师编号',
+    //   references: {
+    //     model: app.model.Role,
+    //     key: 'id'
+    //   }
+    // },
     questionId: {
       type: INTEGER,
       allowNull: false,
