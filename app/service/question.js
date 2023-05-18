@@ -14,13 +14,13 @@ class Question extends service {
   async addQuestion(data) {
     const { ctx } = this
     const result = await ctx.model.Question.create(data)
-    return result.toJSON().id
+    return result.toJSON().questionId
   }
 
   // 获取题目
   async getQuestion(questionId) {
     const { ctx } = this
-    const result = await ctx.model.Question.findAll({
+    const result = await ctx.model.Question.findOne({
       where: {
         questionId
       }
@@ -44,7 +44,7 @@ class Question extends service {
       content, score, type
     }, {
       where: {
-        id: questionId
+        questionId
       }
     })
     return result

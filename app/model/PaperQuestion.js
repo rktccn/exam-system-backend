@@ -3,6 +3,11 @@
 module.exports = (app) => {
   const { INTEGER, DATE } = app.Sequelize
   const PaperQuestion = app.model.define('paper_question', {
+    paperQuestionId: {
+      type: INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     paperId: {
       type: INTEGER,
       allowNull: false,

@@ -35,4 +35,12 @@ module.exports = app => {
   router.post('/paper/add', controller.paper.createPaper)
   // 获取试卷列表
   router.get('/paper/list', controller.paper.getPaperList)
+  // 获取学生试卷列表
+  router.get('/paper/student-list', controller.paper.getStudentPaperList)
+  // 获取试卷详情
+  router.get('/paper/detail', controller.paper.getPaperDetail)
+  // 获取考试试卷详情（不包含答案）
+  router.get('/paper/exam-detail', controller.paper.getExam)
+  // 更新考试分数
+  router.post('/paper/update-score', controller.paper.updatePaperScore)
 }

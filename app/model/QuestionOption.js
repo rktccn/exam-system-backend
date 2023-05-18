@@ -3,6 +3,11 @@
 module.exports = (app) => {
   const { STRING, BOOLEAN, INTEGER, DATE } = app.Sequelize
   const QuestionOption = app.model.define('question_option', {
+    questionOptionId: {
+      type: INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     // teacherId: {
     //   type: INTEGER,
     //   allowNull: false,
@@ -47,7 +52,7 @@ module.exports = (app) => {
       field: 'updated_at',
       type: DATE
     }
-  },{
+  }, {
     collate: 'utf8mb4_general_ci'
   })
 

@@ -45,11 +45,11 @@ class RoleController extends Controller {
   async searchUser() {
     const { ctx } = this
 
-    let { id, no, name, email } = ctx.query
-    id = id ? parseInt(id) : id
+    let { userId, no, name, email } = ctx.query
+    userId = userId ? parseInt(userId) : userId
     no = no ? parseInt(no) : no
 
-    ctx.body = await ctx.service.role.searchUser(id, no, name, email)
+    ctx.body = await ctx.service.role.searchUser(userId, no, name, email)
   }
 
   // 获取所有用户
@@ -94,8 +94,8 @@ class RoleController extends Controller {
         ctx.body = { code: 404, message: '账号或密码错误' }
         return
       }
-      const { id, no, email, name, age } = res
-      ctx.body = { code: 200, data: { id, no, email, name, age } }
+      const { userId, no, email, name, age } = res
+      ctx.body = { code: 200, data: { userId, no, email, name, age } }
     }
 
     // 检查邮箱类型
@@ -106,8 +106,8 @@ class RoleController extends Controller {
         ctx.body = { code: 404, message: '账号或密码错误' }
         return
       }
-      const { id, no, email, name, age } = res
-      ctx.body = { code: 200, data: { id, no, email, name, age } }
+      const { userId, no, email, name, age } = res
+      ctx.body = { code: 200, data: { userId, no, email, name, age } }
     }
 
   }
@@ -145,9 +145,9 @@ class RoleController extends Controller {
   // 更新用户信息
   async updateUserInfo() {
     const { ctx } = this
-    const { id, no, email, name, age, password, permission } = ctx.request.body
+    const { userId, no, email, name, age, password, permission } = ctx.request.body
     // 更新
-    ctx.body = await ctx.service.role.updateUser(id, no, email, name, age, password, permission)
+    ctx.body = await ctx.service.role.updateUser(userId, no, email, name, age, password, permission)
   }
 }
 

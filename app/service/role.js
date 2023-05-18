@@ -63,7 +63,7 @@ class Role extends service {
     const { ctx } = this
     const role = await ctx.model.Role.findOne({
       where: {
-        id: userId
+        userId
       }
     })
 
@@ -77,13 +77,13 @@ class Role extends service {
   }
 
 // 搜索用户
-  async searchUser(id = null, no = null, name = null, email = null) {
+  async searchUser(userId = null, no = null, name = null, email = null) {
     const { ctx } = this
     const Op = this.app.Sequelize.Op
     const user = await ctx.model.Role.findAll({
       where: {
         [Op.or]: [
-          { no }, { id }, { name }, { email }
+          { no }, { userId }, { name }, { email }
         ]
       }
     })
@@ -133,7 +133,7 @@ class Role extends service {
   }
 
   // 更新用户信息
-  async updateUser(id, no, email, name, age, password, permission) {
+  async updateUser(userId, no, email, name, age, password, permission) {
     const { ctx } = this
     await ctx.model.Role.update({
       no,
@@ -143,7 +143,7 @@ class Role extends service {
       password,
       permission
     }, {
-      where: { id }
+      where: { userId }
     })
   }
 }

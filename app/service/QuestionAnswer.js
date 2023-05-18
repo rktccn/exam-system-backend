@@ -15,7 +15,7 @@ class QuestionAnswer extends Service {
   async addQuestionAnswer(data) {
     const { ctx } = this
     const result = await ctx.model.QuestionOption.create(data)
-    return result.toJSON().id
+    return result.toJSON().questionOptionId
   }
 
 
@@ -25,6 +25,20 @@ class QuestionAnswer extends Service {
     const res = await ctx.model.QuestionOption.findAll({
       where: {
         questionId
+      }
+    })
+    return res.map((item) => {
+      return item.toJSON()
+    })
+  }
+
+  // 获取题目选项，排除是否为正确答案
+  async getQuestionAnswerExcludeCorrect(questionId) {
+    const { ctx } = this
+    const res = await ctx.model.QuestionOption.findAll({
+      attributes: [ 'questionOptionId', 'content', 'questionId', 'createdAt', 'updatedAt' ],
+      where: {
+        questionId,
       }
     })
     return res.map((item) => {

@@ -3,6 +3,11 @@
 module.exports = (app) => {
   const { STRING, BIGINT, INTEGER, DATE } = app.Sequelize
   const Paper = app.model.define('paper', {
+    paperId: {
+      type: INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     teacherId: {
       type: INTEGER,
       allowNull: false,

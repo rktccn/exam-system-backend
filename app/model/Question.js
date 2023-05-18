@@ -5,6 +5,11 @@ module.exports = (app) => {
   const { INTEGER, DATE, STRING } = app.Sequelize
 
   const Question = app.model.define('question', {
+    questionId: {
+      type: INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     // teacherId: {
     //   type: INTEGER,
     //   allowNull: false,
@@ -42,7 +47,7 @@ module.exports = (app) => {
     }
   }, {
     comment: '试题表'
-  },{
+  }, {
     collate: 'utf8mb4_general_ci'
   })
 

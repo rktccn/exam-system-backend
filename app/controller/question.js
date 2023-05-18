@@ -39,7 +39,7 @@ class QuestionController extends Controller {
     // 获取题目列表后，再获取题目答案
     for (const question of questionList) {
 
-      question.options = await ctx.service.questionAnswer.getQuestionAnswer(question.id)
+      question.options = await ctx.service.questionAnswer.getQuestionAnswer(question.questionId)
     }
 
     ctx.body = {
@@ -50,6 +50,7 @@ class QuestionController extends Controller {
       }
     }
   }
+
 
   // 修改题目
   async updateQuestion() {

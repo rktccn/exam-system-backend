@@ -7,7 +7,7 @@ class PaperQuestion extends service {
   async createPaperQuestion(data) {
     const { ctx } = this
     const result = await ctx.model.PaperQuestion.create(data)
-    return result.toJSON().id
+    return result.toJSON().paperQuestionId
   }
 
 

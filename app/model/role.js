@@ -3,7 +3,12 @@
 module.exports = (app) => {
   const { STRING, BIGINT, INTEGER, DATE } = app.Sequelize
 
-  const Role = app.model.define('Role', {
+  const Role = app.model.define('User', {
+    userId: {
+      type: INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     // 编号
     no: {
       type: BIGINT(10),
@@ -48,7 +53,7 @@ module.exports = (app) => {
     }
   }, {
     comment: '角色表'
-  },{
+  }, {
     collate: 'utf8mb4_general_ci'
   })
 

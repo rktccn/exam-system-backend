@@ -4,6 +4,11 @@ module.exports = (app) => {
   const { INTEGER, DATE } = app.Sequelize
 
   const StudentPaper = app.model.define('student_paper', {
+    studentPaperId: {
+      type: INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     studentId: {
       type: INTEGER,
       allowNull: false,
@@ -28,17 +33,11 @@ module.exports = (app) => {
       allowNull: true,
       comment: '得分'
     },
-    // 总分
-    totalScore: {
-      field: 'total_score',
-      type: INTEGER,
-      allowNull: true,
-      comment: '总分'
-    },
+
     // 答题时间
     answerTime: {
       field: 'answer_time',
-      type: INTEGER,
+      type: DATE,
       allowNull: true,
       comment: '答题时间'
     },
