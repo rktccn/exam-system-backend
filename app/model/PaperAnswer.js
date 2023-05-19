@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = (app) => {
-  const { INTEGER, DATE } = app.Sequelize
+  const { INTEGER, DATE, STRING, BOOLEAN } = app.Sequelize
 
   const PaperAnswer = app.model.define('paper_answer', {
     paperAnswerId: {
@@ -27,14 +27,15 @@ module.exports = (app) => {
         key: 'id'
       }
     },
-    answerId: {
-      type: INTEGER,
+    content: {
+      type: STRING(1000),
       allowNull: false,
-      comment: '试题选项编号',
-      references: {
-        model: app.model.QuestionOption,
-        key: 'id'
-      }
+      comment: '答案'
+    },
+    isCorrect: {
+      type: BOOLEAN,
+      allowNull: false,
+      comment: '是否正确'
     },
     createdAt: {
       field: 'created_at',

@@ -38,7 +38,7 @@ class QuestionAnswer extends Service {
     const res = await ctx.model.QuestionOption.findAll({
       attributes: [ 'questionOptionId', 'content', 'questionId', 'createdAt', 'updatedAt' ],
       where: {
-        questionId,
+        questionId
       }
     })
     return res.map((item) => {
@@ -55,7 +55,9 @@ class QuestionAnswer extends Service {
         isCorrect: 1
       }
     })
-    return result.toJSON()
+    return result.map((item) => {
+      return item.toJSON()
+    })
   }
 
   // 修改题目答案

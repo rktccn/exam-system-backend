@@ -41,6 +41,8 @@ module.exports = app => {
   router.get('/paper/detail', controller.paper.getPaperDetail)
   // 获取考试试卷详情（不包含答案）
   router.get('/paper/exam-detail', controller.paper.getExam)
-  // 更新考试分数
-  router.post('/paper/update-score', controller.paper.updatePaperScore)
+  // 提交试卷
+  router.post('/paper/submit', controller.paper.submitPaper)
+  // 获取考试结果
+  router.get('/paper/result', controller.paper.getExamResult)
 }

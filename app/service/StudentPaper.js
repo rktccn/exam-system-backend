@@ -15,7 +15,6 @@ class StudentPaperController extends Controller {
   async updateStudentPaper(data) {
     const { ctx } = this
     const { studentPaperId, ...rest } = data
-    console.log(rest)
     const result = await ctx.model.StudentPaper.update(rest, {
       where: {
         studentPaperId
