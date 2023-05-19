@@ -128,7 +128,5 @@ dist
 
 # egg
 run/
-.idea/workspace.xml
-.idea/workspace.xml
-.idea/workspace.xml
+.idea/
 config/config.default.js
