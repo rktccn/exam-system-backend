@@ -37,6 +37,11 @@ module.exports = (app) => {
       allowNull: false,
       comment: '是否正确'
     },
+    paperId: {
+      type: INTEGER,
+      allowNull: false,
+      comment: '试卷编号'
+    },
     createdAt: {
       field: 'created_at',
       type: DATE

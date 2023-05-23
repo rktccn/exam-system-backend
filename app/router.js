@@ -45,4 +45,6 @@ module.exports = app => {
   router.post('/paper/submit', controller.paper.submitPaper)
   // 获取考试结果
   router.get('/paper/result', controller.paper.getExamResult)
+  // 获取考试结果概况
+  router.get('/paper/result-summary', controller.paper.getExamResultSummary)
 }

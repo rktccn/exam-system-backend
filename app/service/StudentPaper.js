@@ -150,6 +150,36 @@ class StudentPaperController extends Controller {
     })
     return result
   }
+
+  // 获取PaperId
+  async getPaperId(studentPaperId) {
+    const { ctx } = this
+    const result = await ctx.model.StudentPaper.findOne({
+      where: {
+        studentPaperId
+      }
+    })
+    return result.toJSON().paperId
+  }
+
+  // 获取考试答题概况（平均分，最高分，最低分，试卷提交人数）
+  async getExamResultInfo(paperId) {
+    const { ctx } = this
+    const result = await ctx.model.query(
+      'select round(avg(score),2)  avgScore,\n' +
+      '       max(score)  maxScore,\n' +
+      '       min(score)  minScore,\n' +
+      '       sum(status) submitCount,\n' +
+      '       count(*)    count\n' +
+      'from student_papers\n' +
+      'where paper_id = :paperId',
+      {
+        replacements: { paperId },
+        type: ctx.model.QueryTypes.SELECT
+      }
+    )
+    return result[0]
+  }
 }
 
 module.exports = StudentPaperController
