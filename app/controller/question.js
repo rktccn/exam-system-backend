@@ -3,12 +3,15 @@
 const Controller = require('egg').Controller
 
 class QuestionController extends Controller {
-
   // 添加题目
   async addQuestion() {
     const { ctx } = this
     const { content, type, score, options } = ctx.request.body
-    const questionId = await ctx.service.question.addQuestion({ content, type, score })
+    const questionId = await ctx.service.question.addQuestion({
+      content,
+      type,
+      score
+    })
 
     // 获取到题目id后，再添加题目答案
     for (const option of options) {
@@ -29,17 +32,23 @@ class QuestionController extends Controller {
     }
   }
 
-
   // 获取题目列表及答案
   async getQuestionList() {
     const { ctx } = this
-    const questionList = await ctx.service.question.getQuestionList()
-
+    const limit = parseInt(ctx.query.limit) || 10
+    const offset = parseInt(ctx.query.offset) || 0
+    const key = ctx.query.key
+    const questionList = await ctx.service.question.getQuestionList(
+      limit,
+      offset,
+      key
+    )
 
     // 获取题目列表后，再获取题目答案
-    for (const question of questionList) {
-
-      question.options = await ctx.service.questionAnswer.getQuestionAnswer(question.questionId)
+    for (const question of questionList.rows) {
+      question.options = await ctx.service.questionAnswer.getQuestionAnswer(
+        question.questionId
+      )
     }
 
     ctx.body = {
@@ -51,12 +60,16 @@ class QuestionController extends Controller {
     }
   }
 
-
   // 修改题目
   async updateQuestion() {
     const { ctx } = this
     const { questionId, content, type, score, options } = ctx.request.body
-    const result = await ctx.service.question.updateQuestion(questionId, content, score, type)
+    const result = await ctx.service.question.updateQuestion(
+      questionId,
+      content,
+      score,
+      type
+    )
     // 修改题目后，再修改题目答案
     await ctx.service.questionAnswer.deleteQuestionAnswer(questionId)
 
@@ -75,6 +88,17 @@ class QuestionController extends Controller {
       msg: '修改成功',
       data: {}
     }
+  }
+
+  // 搜索题目
+  async searchQuestion() {
+    const { ctx } = this
+    const { key, limit, offset } = ctx.request.body
+    const questionList = await ctx.service.question.searchQuestion(
+      key,
+      limit,
+      offset
+    )
   }
 }
 

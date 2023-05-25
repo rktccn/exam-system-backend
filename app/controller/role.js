@@ -1,7 +1,6 @@
 const { Controller } = require('egg')
 
 class RoleController extends Controller {
-
   // 获取当前用户的角色
   async getRoleByUserId() {
     const { ctx } = this
@@ -55,8 +54,8 @@ class RoleController extends Controller {
   // 获取所有用户
   async getAllUser() {
     const { ctx } = this
-    const limit = parseInt(ctx.query.limit) | 10
-    const offset = parseInt(ctx.query.offset) | 0
+    const limit = parseInt(ctx.query.limit) || 10
+    const offset = parseInt(ctx.query.offset) || 0
     const permission = parseInt(ctx.query.permission)
 
     ctx.body = await ctx.service.role.getAllUser(limit, offset, permission)
@@ -75,11 +74,12 @@ class RoleController extends Controller {
     const { ctx } = this
     const { no, email, password } = ctx.request.body
     // 类型检查
-    const regEmail = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+    const regEmail = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 
     const number = parseInt(no),
       e_email = email
 
+    console.log(password)
 
     // 密码
     if (!password || password.length === 0) {
@@ -94,22 +94,20 @@ class RoleController extends Controller {
         ctx.body = { code: 404, message: '账号或密码错误' }
         return
       }
-      const { userId, no, email, name, age } = res
-      ctx.body = { code: 200, data: { userId, no, email, name, age } }
+      ctx.body = { code: 200, data: { ...res } }
     }
 
     // 检查邮箱类型
     if (e_email && regEmail.test(e_email)) {
+      console.log(e_email)
       const res = await ctx.service.role.loginByEmail(e_email, password)
 
       if (res === null) {
         ctx.body = { code: 404, message: '账号或密码错误' }
         return
       }
-      const { userId, no, email, name, age } = res
-      ctx.body = { code: 200, data: { userId, no, email, name, age } }
+      ctx.body = { code: 200, data: { ...res } }
     }
-
   }
 
   // 注册用户
@@ -142,12 +140,28 @@ class RoleController extends Controller {
     ctx.body = await ctx.service.role.register(no, password, email, name, age)
   }
 
+  // 删除用户
+  async deleteUser() {
+    const { ctx } = this
+    const { userId } = ctx.request.body
+    ctx.body = await ctx.service.role.deleteUser(userId)
+  }
+
   // 更新用户信息
   async updateUserInfo() {
     const { ctx } = this
-    const { userId, no, email, name, age, password, permission } = ctx.request.body
+    const { userId, no, email, name, age, password, permission } =
+      ctx.request.body
     // 更新
-    ctx.body = await ctx.service.role.updateUser(userId, no, email, name, age, password, permission)
+    ctx.body = await ctx.service.role.updateUser(
+      userId,
+      no,
+      email,
+      name,
+      age,
+      password,
+      permission
+    )
   }
 }
 

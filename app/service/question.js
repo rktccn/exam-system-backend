@@ -1,6 +1,7 @@
 'use strict'
 
 const service = require('egg').Service
+const Op = require('sequelize').Op
 
 class Question extends service {
   // 添加题目
@@ -29,25 +30,63 @@ class Question extends service {
   }
 
   // 获取题目列表
-  async getQuestionList() {
+  async getQuestionList(limit, offset, key) {
     const { ctx } = this
-    const res = await ctx.model.Question.findAll()
-    return res.map((item) => {
-      return item.toJSON()
-    })
+    let res
+    if (key) {
+      res = await ctx.model.Question.findAndCountAll({
+        where: {
+          content: {
+            [Op.like]: `%${key}%`
+          }
+        },
+        limit,
+        offset
+      })
+    } else {
+      res = await ctx.model.Question.findAndCountAll({
+        limit,
+        offset
+      })
+    }
+
+    return {
+      count: res.count,
+      rows: res.rows.map(item => item.toJSON())
+    }
   }
 
   // 修改题目
   async updateQuestion(questionId, content, score, type) {
     const { ctx } = this
-    const result = await ctx.model.Question.update({
-      content, score, type
-    }, {
-      where: {
-        questionId
+    const result = await ctx.model.Question.update(
+      {
+        content,
+        score,
+        type
+      },
+      {
+        where: {
+          questionId
+        }
       }
-    })
+    )
     return result
+  }
+
+  // 搜索题目
+  async searchQuestion(key, limit, offset) {
+    const { ctx } = this
+    const result = await ctx.model.Question.findAll({
+      where: {
+        content: {
+          [ctx.model.Op.like]: `%${key}%`
+        }
+      },
+      limit,
+      offset
+    })
+    return result.map(item => item.toJSON())
   }
 }
 

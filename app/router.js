@@ -17,11 +17,12 @@ module.exports = app => {
   router.post('/login', controller.role.login)
   // 注册
   router.post('/register', controller.role.register)
+  // 删除用户
+  router.post('/user/delete', controller.role.deleteUser)
   // 获取用户数量
   router.get('/user/count', controller.role.getUserCount)
   // 更新用户信息
   router.post('/user/update', controller.role.updateUserInfo)
-
 
   // 添加题目
   router.post('/question/add', controller.question.addQuestion)
@@ -29,7 +30,8 @@ module.exports = app => {
   router.get('/question/list', controller.question.getQuestionList)
   // 修改题目
   router.post('/question/update', controller.question.updateQuestion)
-
+  // 搜索题目
+  router.get('/question/search', controller.question.searchQuestion)
 
   // 添加试卷
   router.post('/paper/add', controller.paper.createPaper)
@@ -47,4 +49,6 @@ module.exports = app => {
   router.get('/paper/result', controller.paper.getExamResult)
   // 获取考试结果概况
   router.get('/paper/result-summary', controller.paper.getExamResultSummary)
+  // 获取考试所有学生成绩
+  router.get('/paper/result-all', controller.paper.getExamScore)
 }

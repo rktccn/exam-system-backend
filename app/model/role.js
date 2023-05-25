@@ -27,7 +27,7 @@ module.exports = (app) => {
       comment: '年龄'
     },
     email: {
-      type: STRING(30),
+      type: STRING(100),
       allowNull: false,
       unique: true,
       comment: '邮箱'

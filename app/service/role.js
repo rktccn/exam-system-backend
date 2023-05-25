@@ -3,7 +3,6 @@
 const service = require('egg').Service
 
 class Role extends service {
-
   // 编号登录
   async loginByNo(no, password) {
     const { ctx } = this
@@ -57,8 +56,28 @@ class Role extends service {
     }
   }
 
+  // 删除用户
+  async deleteUser(userId) {
+    const { ctx } = this
+    const user = await ctx.model.Role.findOne({
+      where: {
+        userId
+      }
+    })
 
-// 获取当前用户的角色
+    if (!user) {
+      return { code: 404, message: 'user not found' }
+    } else {
+      await ctx.model.Role.destroy({
+        where: {
+          userId
+        }
+      })
+      return { code: 200, message: 'delete success' }
+    }
+  }
+
+  // 获取当前用户的角色
   async getRoleByUserId(userId) {
     const { ctx } = this
     const role = await ctx.model.Role.findOne({
@@ -76,15 +95,13 @@ class Role extends service {
     return role
   }
 
-// 搜索用户
+  // 搜索用户
   async searchUser(userId = null, no = null, name = null, email = null) {
     const { ctx } = this
     const Op = this.app.Sequelize.Op
     const user = await ctx.model.Role.findAll({
       where: {
-        [Op.or]: [
-          { no }, { userId }, { name }, { email }
-        ]
+        [Op.or]: [{ no }, { userId }, { name }, { email }]
       }
     })
 
@@ -93,10 +110,9 @@ class Role extends service {
     } else {
       return { code: 200, data: user }
     }
-
   }
 
-// 获取所有用户
+  // 获取所有用户
   async getAllUser(limit, offset, permission) {
     const { ctx } = this
     const Op = this.app.Sequelize.Op
@@ -117,7 +133,7 @@ class Role extends service {
     }
   }
 
-// 获取用户数量
+  // 获取用户数量
   async getUserCount(permission) {
     const { ctx } = this
 
@@ -135,18 +151,36 @@ class Role extends service {
   // 更新用户信息
   async updateUser(userId, no, email, name, age, password, permission) {
     const { ctx } = this
-    await ctx.model.Role.update({
-      no,
-      email,
-      name,
-      age,
-      password,
-      permission
-    }, {
-      where: { userId }
-    })
+    console.log(userId)
+    if (password === '') {
+      await ctx.model.Role.update(
+        {
+          no,
+          email,
+          name,
+          age,
+          permission
+        },
+        {
+          where: { userId }
+        }
+      )
+    } else {
+      await ctx.model.Role.update(
+        {
+          no,
+          email,
+          name,
+          age,
+          password,
+          permission
+        },
+        {
+          where: { userId }
+        }
+      )
+    }
   }
 }
-
 
 module.exports = Role

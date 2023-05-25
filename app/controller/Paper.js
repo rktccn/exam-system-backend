@@ -6,7 +6,8 @@ class PaperController extends Controller {
   // 创建试卷
   async createPaper() {
     const { ctx } = this
-    const { teacherId, title, timeRange, questions, students, totalScore } = ctx.request.body
+    const { teacherId, title, timeRange, questions, students, totalScore } =
+      ctx.request.body
 
     const paperId = await ctx.service.paper.createPaper({
       teacherId,
@@ -42,7 +43,11 @@ class PaperController extends Controller {
   async getPaperList() {
     const { ctx } = this
     const { offset, limit, type } = ctx.query
-    const result = await ctx.service.paper.getPaperList(parseInt(limit), parseInt(offset), parseInt(type))
+    const result = await ctx.service.paper.getPaperList(
+      parseInt(limit),
+      parseInt(offset),
+      parseInt(type)
+    )
     ctx.body = result
   }
 
@@ -50,7 +55,12 @@ class PaperController extends Controller {
   async getStudentPaperList() {
     const { ctx } = this
     const { offset, limit, studentId, type } = ctx.query
-    const paperList = await ctx.service.studentPaper.getPaperList(parseInt(studentId), parseInt(limit), parseInt(offset), parseInt(type))
+    const paperList = await ctx.service.studentPaper.getPaperList(
+      parseInt(studentId),
+      parseInt(limit),
+      parseInt(offset),
+      parseInt(type)
+    )
 
     //
     // let res = []
@@ -68,14 +78,20 @@ class PaperController extends Controller {
     // 获取试卷信息
     const paper = await ctx.service.paper.getPaperDetail(paperId)
     // 获取题目
-    const questionList = await ctx.service.paperQuestion.getPaperQuestionList(paperId)
+    const questionList = await ctx.service.paperQuestion.getPaperQuestionList(
+      paperId
+    )
     // 获取题目列表后，再获取题目答案
     for (const question of questionList) {
       // 获取题目
-      question.question = await ctx.service.question.getQuestion(question.questionId)
+      question.question = await ctx.service.question.getQuestion(
+        question.questionId
+      )
 
       // 获取选项
-      question.options = await ctx.service.questionAnswer.getQuestionAnswer(question.questionId)
+      question.options = await ctx.service.questionAnswer.getQuestionAnswer(
+        question.questionId
+      )
     }
     // 获取学生信息
     const studentList = await ctx.service.studentPaper.getStudentList(paperId)
@@ -89,7 +105,6 @@ class PaperController extends Controller {
         studentList
       }
     }
-
   }
 
   // 获取考试（不包含正确答案）
@@ -98,7 +113,9 @@ class PaperController extends Controller {
     const { studentPaperId, userId } = ctx.query
 
     // 获取学生试卷关联信息
-    const studentPaper = await ctx.service.studentPaper.getStudentPaper(studentPaperId)
+    const studentPaper = await ctx.service.studentPaper.getStudentPaper(
+      studentPaperId
+    )
 
     // 检测考生
     // if (studentPaper.studentId !== parseInt(userId)) {
@@ -134,11 +151,18 @@ class PaperController extends Controller {
     // }
 
     // 获取题目关联
-    const questionList = await ctx.service.paperQuestion.getPaperQuestionList(paperId)
+    const questionList = await ctx.service.paperQuestion.getPaperQuestionList(
+      paperId
+    )
     // 获取题目列表后，再获取题目和答案
     for (const question of questionList) {
-      question.question = await ctx.service.question.getQuestion(question.questionId)
-      question.options = await ctx.service.questionAnswer.getQuestionAnswerExcludeCorrect(question.questionId)
+      question.question = await ctx.service.question.getQuestion(
+        question.questionId
+      )
+      question.options =
+        await ctx.service.questionAnswer.getQuestionAnswerExcludeCorrect(
+          question.questionId
+        )
     }
     // 提交答题时间
     await ctx.service.studentPaper.updateStudentPaper({
@@ -165,7 +189,10 @@ class PaperController extends Controller {
     // 判断答案是否正确
     for (const answer of answers) {
       // 获取正确答案
-      const correctAnswer = await ctx.service.questionAnswer.getQuestionCorrectAnswer(answer.questionId)
+      const correctAnswer =
+        await ctx.service.questionAnswer.getQuestionCorrectAnswer(
+          answer.questionId
+        )
       // 获取题目，获得小题分数
       const question = await ctx.service.question.getQuestion(answer.questionId)
       let option,
@@ -180,9 +207,7 @@ class PaperController extends Controller {
           option.push(item.questionOptionId)
         })
         // 判断答案是否正确
-        if (answer.option.sort()
-          .toString() === option.sort()
-          .toString()) {
+        if (answer.option.sort().toString() === option.sort().toString()) {
           score += question.score
           isCorrect = true
         }
@@ -211,7 +236,6 @@ class PaperController extends Controller {
       })
     }
 
-
     // 更新关联信息
     await ctx.service.studentPaper.updateStudentPaper({
       studentPaperId,
@@ -233,20 +257,30 @@ class PaperController extends Controller {
   async getExamResult() {
     const { ctx } = this
     const { studentPaperId } = ctx.query
-    const studentPaper = await ctx.service.studentPaper.getStudentPaper(studentPaperId)
+    const studentPaper = await ctx.service.studentPaper.getStudentPaper(
+      studentPaperId
+    )
 
     // 获取试卷信息
     const paper = await ctx.service.paper.getPaperDetail(studentPaper.paperId)
 
     // 获取题目及答题信息
-    const questionList = await ctx.service.paperQuestion.getPaperQuestionList(studentPaper.paperId)
+    const questionList = await ctx.service.paperQuestion.getPaperQuestionList(
+      studentPaper.paperId
+    )
     // 获取题目列表后，再获取题目和答案
     for (const question of questionList) {
-      question.question = await ctx.service.question.getQuestion(question.questionId)
-      question.options = await ctx.service.questionAnswer.getQuestionAnswer(question.questionId)
-      question.answer = await ctx.service.paperAnswer.getPaperAnswer(studentPaperId, question.questionId)
+      question.question = await ctx.service.question.getQuestion(
+        question.questionId
+      )
+      question.options = await ctx.service.questionAnswer.getQuestionAnswer(
+        question.questionId
+      )
+      question.answer = await ctx.service.paperAnswer.getPaperAnswer(
+        studentPaperId,
+        question.questionId
+      )
     }
-
 
     ctx.body = {
       code: 200,
@@ -268,17 +302,23 @@ class PaperController extends Controller {
     const paper = await ctx.service.paper.getPaperDetail(paperId)
 
     // 获取答题正确率
-    const questionAccuracy = await ctx.service.paperAnswer.getPaperScoreRate(paperId)
+    const questionAccuracy = await ctx.service.paperAnswer.getPaperScoreRate(
+      paperId
+    )
 
     const paperInfo = await ctx.service.studentPaper.getExamResultInfo(paperId)
 
     // 获取题目列表后，再获取题目答案
     for (const question of questionAccuracy) {
       // 获取题目
-      question.question = await ctx.service.question.getQuestion(question.questionId)
+      question.question = await ctx.service.question.getQuestion(
+        question.questionId
+      )
 
       // 获取选项
-      question.options = await ctx.service.questionAnswer.getQuestionAnswer(question.questionId)
+      question.options = await ctx.service.questionAnswer.getQuestionAnswer(
+        question.questionId
+      )
     }
 
     ctx.body = {
@@ -291,7 +331,22 @@ class PaperController extends Controller {
       }
     }
   }
-}
 
+  // 获取考试分数
+  async getExamScore() {
+    const { ctx } = this
+    const { paperId } = ctx.query
+
+    const gradeList = await ctx.service.studentPaper.getExamScore(paperId)
+
+    ctx.body = {
+      code: 200,
+      msg: '获取成功',
+      data: {
+        gradeList
+      }
+    }
+  }
+}
 
 module.exports = PaperController
