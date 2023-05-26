@@ -117,6 +117,16 @@ class Role extends service {
     const { ctx } = this
     const Op = this.app.Sequelize.Op
 
+    if (!limit && (permission === 0 || permission === 1 || permission === 2)) {
+      return await ctx.model.Role.findAndCountAll({
+        where: {
+          permission: permission
+        }
+      })
+    } else if (!limit) {
+      return await ctx.model.Role.findAndCountAll()
+    }
+
     if (permission === 0 || permission === 1 || permission === 2) {
       return await ctx.model.Role.findAndCountAll({
         limit,
@@ -151,7 +161,6 @@ class Role extends service {
   // 更新用户信息
   async updateUser(userId, no, email, name, age, password, permission) {
     const { ctx } = this
-    console.log(userId)
     if (password === '') {
       await ctx.model.Role.update(
         {

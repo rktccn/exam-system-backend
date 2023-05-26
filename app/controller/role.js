@@ -54,8 +54,8 @@ class RoleController extends Controller {
   // 获取所有用户
   async getAllUser() {
     const { ctx } = this
-    const limit = parseInt(ctx.query.limit) || 10
-    const offset = parseInt(ctx.query.offset) || 0
+    const limit = parseInt(ctx.query.limit)
+    const offset = parseInt(ctx.query.offset)
     const permission = parseInt(ctx.query.permission)
 
     ctx.body = await ctx.service.role.getAllUser(limit, offset, permission)
@@ -79,8 +79,6 @@ class RoleController extends Controller {
     const number = parseInt(no),
       e_email = email
 
-    console.log(password)
-
     // 密码
     if (!password || password.length === 0) {
       ctx.body = { code: 400, message: '请输入密码' }
@@ -99,7 +97,6 @@ class RoleController extends Controller {
 
     // 检查邮箱类型
     if (e_email && regEmail.test(e_email)) {
-      console.log(e_email)
       const res = await ctx.service.role.loginByEmail(e_email, password)
 
       if (res === null) {
@@ -153,7 +150,7 @@ class RoleController extends Controller {
     const { userId, no, email, name, age, password, permission } =
       ctx.request.body
     // 更新
-    ctx.body = await ctx.service.role.updateUser(
+    await ctx.service.role.updateUser(
       userId,
       no,
       email,
@@ -162,6 +159,7 @@ class RoleController extends Controller {
       password,
       permission
     )
+    ctx.body = { code: 200, message: '更新成功' }
   }
 }
 

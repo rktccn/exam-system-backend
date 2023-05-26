@@ -33,6 +33,15 @@ class Question extends service {
   async getQuestionList(limit, offset, key) {
     const { ctx } = this
     let res
+
+    if (!limit) {
+      res = await ctx.model.Question.findAndCountAll()
+      return {
+        count: res.count,
+        rows: res.rows.map(item => item.toJSON())
+      }
+    }
+
     if (key) {
       res = await ctx.model.Question.findAndCountAll({
         where: {

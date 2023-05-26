@@ -116,25 +116,24 @@ class PaperController extends Controller {
     const studentPaper = await ctx.service.studentPaper.getStudentPaper(
       studentPaperId
     )
-
+    
     // 检测考生
-    // if (studentPaper.studentId !== parseInt(userId)) {
-    //   ctx.body = {
-    //     code: 400,
-    //     msg: '考生信息错误'
-    //   }
-    //   return
-    //
-    // }
+    if (studentPaper.studentId !== parseInt(userId)) {
+      ctx.body = {
+        code: 400,
+        msg: '考生与试卷不匹配'
+      }
+      return
+    }
 
     // 判断是否已经考试
-    // if (studentPaper.status === 1) {
-    //   ctx.body = {
-    //     code: 400,
-    //     msg: '已经考试'
-    //   }
-    //   return
-    // }
+    if (studentPaper.status === 1) {
+      ctx.body = {
+        code: 102,
+        msg: '已经考试'
+      }
+      return
+    }
 
     const paperId = studentPaper.paperId
     // 获取试卷信息
@@ -142,13 +141,13 @@ class PaperController extends Controller {
 
     // 判断是否在考试时间内
     const now = new Date()
-    // if (now < paper.startTime || now > paper.endTime) {
-    //   ctx.body = {
-    //     code: 400,
-    //     msg: '不在考试时间内'
-    //   }
-    //   return
-    // }
+    if (now < paper.startTime || now > paper.endTime) {
+      ctx.body = {
+        code: 400,
+        msg: '不在考试时间内'
+      }
+      return
+    }
 
     // 获取题目关联
     const questionList = await ctx.service.paperQuestion.getPaperQuestionList(
@@ -200,14 +199,15 @@ class PaperController extends Controller {
 
       // 选择题处理
       if (answer.type <= 1) {
-        // 创建答案列表
-        option = []
+        // 创建正确答案列表
+        option = answer.option.sort()
 
-        correctAnswer.forEach(item => {
-          option.push(item.questionOptionId)
+        const correctOption = correctAnswer.map(item => {
+          return item.questionOptionId
         })
+
         // 判断答案是否正确
-        if (answer.option.sort().toString() === option.sort().toString()) {
+        if (option.toString() === correctOption.sort().toString()) {
           score += question.score
           isCorrect = true
         }

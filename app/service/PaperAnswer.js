@@ -3,10 +3,8 @@
 const service = require('egg').Service
 
 class PaperAnswer extends service {
-
   // 添加答题记录
   async createPaperAnswer(data) {
-    console.log(data)
     const { ctx } = this
     const result = await ctx.model.PaperAnswer.create(data)
     return result.toJSON().paperAnswerId
@@ -29,11 +27,11 @@ class PaperAnswer extends service {
     const { ctx } = this
     const result = await ctx.model.query(
       'select question_id     questionId,\n' +
-      '       count(*)        total,\n' +
-      '       round(avg(is_correct),2) accuracy\n' +
-      'from paper_answers\n' +
-      'where paper_id = :paperId\n' +
-      'group by question_id',
+        '       count(*)        total,\n' +
+        '       round(avg(is_correct),2) accuracy\n' +
+        'from paper_answers\n' +
+        'where paper_id = :paperId\n' +
+        'group by question_id',
       {
         replacements: {
           paperId
@@ -43,7 +41,6 @@ class PaperAnswer extends service {
     )
     return result
   }
-
 }
 
-module.exports = PaperAnswer
+module.exports = PaperAnswer;

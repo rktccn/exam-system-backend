@@ -10,7 +10,6 @@ class PaperQuestion extends service {
     return result.toJSON().paperQuestionId
   }
 
-
   // 获取试卷题目关联
   async getPaperQuestionList(paperId) {
     const { ctx } = this

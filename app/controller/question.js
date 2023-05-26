@@ -35,8 +35,8 @@ class QuestionController extends Controller {
   // 获取题目列表及答案
   async getQuestionList() {
     const { ctx } = this
-    const limit = parseInt(ctx.query.limit) || 10
-    const offset = parseInt(ctx.query.offset) || 0
+    const limit = parseInt(ctx.query.limit)
+    const offset = parseInt(ctx.query.offset)
     const key = ctx.query.key
     const questionList = await ctx.service.question.getQuestionList(
       limit,
