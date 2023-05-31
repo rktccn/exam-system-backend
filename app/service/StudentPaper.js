@@ -52,7 +52,6 @@ class StudentPaperController extends Controller {
           type: ctx.model.QueryTypes.SELECT
         }
       )
-
       rows = await ctx.model.query(
         'select s.student_paper_id studentPaperId,\n' +
           '       student_id studentId,\n' +
